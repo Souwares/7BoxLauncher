@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:src="@mipmap/ic_launcher"
+        android:contentDescription="@string/todo" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:textSize="18sp"
+        android:textColor="@color/white" />
+
+    <FrameLayout
+        android:id="@+id/slide_container"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/logo"
+        android:layout_alignParentLeft="true">
+
+    </FrameLayout>
+
+    <GridView
+        android:id="@+id/column_apps"
+        android:layout_width="150dp"
+        android:layout_height="match_parent"
+        android:layout_below="@id/slide_container"
+        android:layout_alignParentLeft="true"
+        android:numColumns="2"
+        android:verticalSpacing="10dp"
+        android:horizontalSpacing="10dp"
+        android:stretchMode="columnWidth"
+        android:gravity="center">
+
+    </GridView>
+
+    <ListView
+        android:id="@+id/list_apps"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/column_apps"
+        android:layout_alignParentLeft="true"
+        android:orientation="horizontal"
+        android:divider="@color/gray"
+        android:dividerHeight="1dp">
+
+    </ListView>
+
+    <ListView
+        android:id="@+id/app_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>
